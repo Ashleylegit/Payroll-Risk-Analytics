@@ -1,5 +1,3 @@
-# Payroll-Risk-Analytics
-Payroll Risks Findings
 # Payroll Risk Analytics
 
 ## Project Overview
@@ -50,21 +48,27 @@ All analysis was performed on a cleaned payroll table imported from Excel into S
 
 ## Key Analyses Performed
 
+### Note on Simulated Control Failures
+
+To fully demonstrate detection logic and analytical capability, **a limited number of simulated records** were intentionally introduced into the dataset. These simulated issues are clearly documented and were used solely to validate anomaly detection, control testing, and reporting logic. This mirrors common practice in analytics portfolios and audit training exercises.
+
+---
+
 ### 1. Overtime Anomaly Detection
 
 Overtime records exceeding a defined threshold were flagged as **HIGH RISK**, highlighting potential policy violations and cost exposure.
 
-### 2. Duplicate Payment Testing
+### 2. Duplicate Payment Testing (Simulated)
 
-Employee payments were tested for duplicates by employee and pay period. No duplicate payments were identified, indicating effective payroll controls.
+Duplicate employee payment scenarios were intentionally simulated to validate detection logic. Records were tested by employee and pay period to ensure the system correctly identifies duplicate payouts.
 
 ### 3. Pay Variance Risk Analysis
 
 Differences between expected and actual pay were analyzed. Variances exceeding tolerance thresholds were flagged as **HIGH RISK** for further review.
 
-### 4. Deduction Validation
+### 4. Deduction Validation (Simulated)
 
-Payroll records were tested for missing or zero deductions. No missing deductions were identified, confirming compliance in this control area.
+Missing or zero-deduction scenarios were simulated to confirm that deduction completeness checks correctly identify payroll compliance issues.
 
 ---
 
@@ -113,7 +117,7 @@ Summary outputs are exported as CSV files for reporting or visualization.
 
 Potential extensions of this project include:
 
-* Visual dashboards (Power BI or Excel) built from SQL outputs
+* Visual dashboards Power BI built from SQL outputs
 * Integration with transaction fraud detection analysis
 * Expansion into privacy and compliance risk assessments
 
