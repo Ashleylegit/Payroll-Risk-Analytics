@@ -1,1 +1,4 @@
-
+SELECT
+  SUM(Overtime_Hours * Hourly_Rate * 1.5) AS estimated_overtime_exposure
+FROM payroll
+WHERE Overtime_Hours > 15;
