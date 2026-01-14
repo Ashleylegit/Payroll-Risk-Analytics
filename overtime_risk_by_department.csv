@@ -1,9 +1,0 @@
-/*Overtime by department*/
-
-SELECT Department,
-       COUNT(*) AS rows_count,
-       AVG(Overtime_Hours) AS avg_ot,
-       MAX(Overtime_Hours) AS max_ot
-FROM payroll
-GROUP BY Department
-ORDER BY avg_ot DESC;
