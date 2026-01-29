@@ -129,7 +129,7 @@ Additional anomaly detection techniques
 👤 Author
 
 Asheka Baker
-Data Analytics Portfolio Project
+Business Analytics Portfolio Project
 Power BI • SQL • Fraud Analytics
 ## Disclaimer
 
