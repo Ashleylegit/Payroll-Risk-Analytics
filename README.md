@@ -1,101 +1,106 @@
-🔍 Fraud Detection Analytics Dashboard (SQL + Power BI)
 📌 Project Overview
 
-This project simulates a financial fraud detection system designed to identify high-risk transactions using SQL-based rule logic and interactive Power BI dashboards.
+This project simulates a payroll audit and risk analysis system designed to identify payroll errors, control weaknesses, and financial exposure risks using SQL analysis and Power BI dashboards.
 
-The goal is to detect suspicious behavior patterns, quantify potential financial exposure, and provide business stakeholders with actionable fraud insights through visualization.
+The goal is to help organizations detect payroll inconsistencies, prevent financial leakage, and improve payroll compliance through data-driven reporting.
 
 🎯 Business Objectives
 
 This project focuses on:
 
-Identifying duplicate transaction activity
+Detecting payroll errors and anomalies
 
-Detecting unusually large transaction amounts
+Identifying overtime abuse risks
 
-Flagging off-hours transaction anomalies
+Highlighting duplicate employee records
 
-Categorizing transactions by risk severity
+Flagging missing or inconsistent deductions
 
-Estimating total financial exposure related to fraud risk
+Quantifying financial exposure related to payroll risk
 
-Presenting insights through interactive dashboards
+Visualizing payroll risk trends for management decision-making
 
 🛠 Tools & Technologies
 
-SQLite — Data querying & fraud flag logic
+SQLite — Payroll dataset querying
 
-SQL — View creation, aggregation, risk scoring
+SQL — Audit logic, aggregations, risk calculations
 
-Microsoft Power BI — Dashboard design & KPI reporting
+Microsoft Power BI — Dashboard creation and KPI reporting
 
-GitHub — Version control & portfolio hosting
+GitHub — Version control and portfolio hosting
 
 📂 Dataset Overview
 
-The dataset simulates financial transaction activity and includes the following fields:
+The payroll dataset simulates employee compensation activity and includes the following fields:
 
-Transaction ID
+Employee ID
 
-Transaction Date & Time
+Department
 
-Transaction Amount
+Hours Worked
 
-Vendor / Customer
+Overtime Hours
 
-Payment Method
+Pay Rate
 
-Location
+Deductions
 
-⚙ Fraud Detection Logic
+Pay Period
 
-Fraud risk was calculated using rule-based detection logic implemented in SQL views.
+⚙ Payroll Audit Logic
 
-✅ Duplicate Transaction Detection
+Payroll risk indicators were created using SQL queries and views.
 
-Flags transactions that share:
+✅ Overtime Risk Detection
 
-Same vendor
+Identifies departments and employees with unusually high overtime usage.
 
-Same amount
+✅ Duplicate Employee Detection
 
-Same timestamp
+Flags repeated employee records that may indicate payroll system duplication or processing errors.
 
-✅ Large Amount Detection
+✅ Missing Deduction Detection
 
-Identifies transactions exceeding a predefined high-value threshold to flag potential fraud risk.
+Highlights payroll entries missing mandatory deductions.
 
-✅ Time-Based Anomaly Detection
+✅ Financial Exposure Calculation
 
-Flags transactions occurring outside standard business operating hours.
+Estimates potential cost impact caused by overtime anomalies and payroll inconsistencies.
 
-📊 Risk Scoring Model
+📊 Risk Metrics Produced
 
-Each transaction receives a risk score based on triggered fraud indicators.
+The analysis generated multiple audit outputs:
 
-Risk Level	Criteria
-High Risk	2 or more fraud flags triggered
-Medium Risk	1 fraud flag triggered
-Low Risk	No fraud flags triggered
+Overtime risk by department
+
+Error frequency summary
+
+Payroll risk counts
+
+Estimated financial exposure
+
+High-risk department identification
+
 📈 Dashboard Features
 
 The Power BI dashboard includes:
 
-Total flagged transaction KPIs
+Payroll risk KPIs
 
-Financial exposure summary
+Overtime cost exposure summary
 
-Risk level distribution charts
+Error count breakdown by department
 
-High-risk transaction tables
+Risk distribution charts
 
-Department/vendor risk breakdowns
+Department-level payroll risk visualization
 
 🖥 Dashboard Preview
 
-(Insert your exported Power BI dashboard screenshot here)
+(Insert your Power BI dashboard screenshot here)
 
-screenshots/fraud_dashboard.png
+screenshots/payroll_dashboard.png
 
 
 Example:
@@ -104,33 +109,30 @@ Example:
 
 This project demonstrates the ability to:
 
-Build fraud detection logic using SQL
+Perform payroll audit analysis using SQL
 
-Create reusable analytical views
+Identify compliance and financial risk indicators
 
-Design executive-level dashboards
+Build executive-level payroll dashboards
 
-Translate raw data into actionable insights
+Translate payroll data into actionable insights
 
-Support risk management decision-making
+Support finance and HR decision-making
 
-🚀 Future Improvements
+🚀 Future Enhancements
 
-Planned enhancements include:
+Potential improvements include:
 
-Machine learning fraud prediction models
+Automated payroll anomaly detection
 
-Real-time transaction streaming integration
+Real-time payroll monitoring dashboards
 
-Automated alert systems
+Integration with HRIS systems
 
-Additional anomaly detection techniques
+Advanced overtime fraud detection rules
 
 👤 Author
 
 Asheka Baker
-Business Analytics Portfolio Project
-Power BI • SQL • Fraud Analytics
-## Disclaimer
-
-This project uses anonymized and simulated data for educational and portfolio purposes only. Findings are illustrative and do not represent any real organization.
+Payroll Analytics Portfolio Project
+SQL • Power BI •
