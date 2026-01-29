@@ -1,128 +1,136 @@
-# Payroll Risk Analytics
+🔍 Fraud Detection Analytics Dashboard (SQL + Power BI)
+📌 Project Overview
 
-## Project Overview
+This project simulates a financial fraud detection system designed to identify high-risk transactions using SQL-based rule logic and interactive Power BI dashboards.
 
-This project focuses on **payroll audit and risk analysis** using SQL. The objective is to identify payroll-related risks, validate internal controls, and quantify potential financial exposure. While the original concept was designed for Excel-based analysis, the project was executed in **SQLite using SQL**, demonstrating that the same analytical objectives can be achieved more reliably and scalably in a database environment.
+The goal is to detect suspicious behavior patterns, quantify potential financial exposure, and provide business stakeholders with actionable fraud insights through visualization.
 
-The analysis mirrors real-world payroll audit work: testing controls, identifying anomalies, and clearly communicating findings to decision-makers.
+🎯 Business Objectives
 
----
+This project focuses on:
 
-## Analysis Objectives
+Identifying duplicate transaction activity
 
-The project was designed to address the following objectives:
+Detecting unusually large transaction amounts
 
-* Identify **overtime anomalies** that may indicate policy violations or cost leakage
-* Test for **duplicate employee payments** to validate payroll controls
-* Flag **pay variance risks** where actual pay deviates from expected calculations
-* Validate **deduction completeness** across payroll records
+Flagging off-hours transaction anomalies
 
-Importantly, where no issues were found (duplicates, missing deductions), results are reported as **control tests passed**, reflecting real audit practice.
+Categorizing transactions by risk severity
 
----
+Estimating total financial exposure related to fraud risk
 
-## Tools & Technologies
+Presenting insights through interactive dashboards
 
-* **SQLite** – lightweight relational database engine
-* **SQL** – data analysis, risk logic, and control testing
-* **DB Browser for SQLite** – query execution and data inspection
-* **Excel (CSV export only)** – source data preparation and optional visualization
+🛠 Tools & Technologies
 
----
+SQLite — Data querying & fraud flag logic
 
-## Data Description
+SQL — View creation, aggregation, risk scoring
 
-The dataset represents payroll records with fields including:
+Microsoft Power BI — Dashboard design & KPI reporting
 
-* Employee ID
-* Department
-* Pay period
-* Regular hours and overtime hours
-* Hourly rate
-* Gross pay, deductions, net pay
-* Calculated pay variance
+GitHub — Version control & portfolio hosting
 
-All analysis was performed on a cleaned payroll table imported from Excel into SQLite.
+📂 Dataset Overview
 
----
+The dataset simulates financial transaction activity and includes the following fields:
 
-## Key Analyses Performed
+Transaction ID
 
-### Note on Simulated Control Failures
+Transaction Date & Time
 
-To fully demonstrate detection logic and analytical capability, **a limited number of simulated records** were intentionally introduced into the dataset. These simulated issues are clearly documented and were used solely to validate anomaly detection, control testing, and reporting logic. This mirrors common practice in analytics portfolios and audit training exercises.
+Transaction Amount
 
----
+Vendor / Customer
 
-### 1. Overtime Anomaly Detection
+Payment Method
 
-Overtime records exceeding a defined threshold were flagged as **HIGH RISK**, highlighting potential policy violations and cost exposure.
+Location
 
-### 2. Duplicate Payment Testing (Simulated)
+⚙ Fraud Detection Logic
 
-Duplicate employee payment scenarios were intentionally simulated to validate detection logic. Records were tested by employee and pay period to ensure the system correctly identifies duplicate payouts.
+Fraud risk was calculated using rule-based detection logic implemented in SQL views.
 
-### 3. Pay Variance Risk Analysis
+✅ Duplicate Transaction Detection
 
-Differences between expected and actual pay were analyzed. Variances exceeding tolerance thresholds were flagged as **HIGH RISK** for further review.
+Flags transactions that share:
 
-### 4. Deduction Validation (Simulated)
+Same vendor
 
-Missing or zero-deduction scenarios were simulated to confirm that deduction completeness checks correctly identify payroll compliance issues.
+Same amount
 
----
+Same timestamp
 
-## Risk Logic Implementation
+✅ Large Amount Detection
 
-Risk classification was implemented using SQL `CASE` logic within a reusable database **VIEW**, separating raw data from analytical logic. This approach reflects professional analytics and audit best practices.
+Identifies transactions exceeding a predefined high-value threshold to flag potential fraud risk.
 
-Risk categories include:
+✅ Time-Based Anomaly Detection
 
-* **HIGH RISK** – records exceeding defined overtime or pay variance thresholds
-* **Normal** – records within expected policy and calculation limits
+Flags transactions occurring outside standard business operating hours.
 
----
+📊 Risk Scoring Model
 
-## Outputs
+Each transaction receives a risk score based on triggered fraud indicators.
 
-The project produces the following outputs:
+Risk Level	Criteria
+High Risk	2 or more fraud flags triggered
+Medium Risk	1 fraud flag triggered
+Low Risk	No fraud flags triggered
+📈 Dashboard Features
 
-* **Payroll Risk View** – a SQL view classifying each record by risk level
-* **Estimated Financial Impact** – quantified exposure from excessive overtime and pay variances
-* **Error / Risk Frequency Analysis** – aggregation of risk counts by department and period
+The Power BI dashboard includes:
 
-Summary outputs are exported as CSV files for reporting or visualization.
+Total flagged transaction KPIs
 
----
+Financial exposure summary
 
-## Key Findings
+Risk level distribution charts
 
-* Overtime risk is concentrated within specific departments, indicating opportunities for targeted management review
-* Estimated financial exposure is driven primarily by excessive overtime rather than payroll system errors
-* Duplicate payments and missing deductions were not present, demonstrating effective existing controls
+High-risk transaction tables
 
----
+Department/vendor risk breakdowns
 
-## Skills Demonstrated
+🖥 Dashboard Preview
 
-* Payroll compliance and audit-style control testing
-* Financial accountability and exposure estimation
-* SQL-based risk analysis and data validation
-* Clear separation of raw data and analytical logic
-* Attention to detail and professional reporting
+(Insert your exported Power BI dashboard screenshot here)
 
----
+screenshots/fraud_dashboard.png
 
-## Next Steps
 
-Potential extensions of this project include:
+Example:
 
-* Visual dashboards Power BI built from SQL outputs
-* Integration with transaction fraud detection analysis
-* Expansion into privacy and compliance risk assessments
+💼 Business Value
 
----
+This project demonstrates the ability to:
 
+Build fraud detection logic using SQL
+
+Create reusable analytical views
+
+Design executive-level dashboards
+
+Translate raw data into actionable insights
+
+Support risk management decision-making
+
+🚀 Future Improvements
+
+Planned enhancements include:
+
+Machine learning fraud prediction models
+
+Real-time transaction streaming integration
+
+Automated alert systems
+
+Additional anomaly detection techniques
+
+👤 Author
+
+Asheka Baker
+Data Analytics Portfolio Project
+Power BI • SQL • Fraud Analytics
 ## Disclaimer
 
 This project uses anonymized and simulated data for educational and portfolio purposes only. Findings are illustrative and do not represent any real organization.
